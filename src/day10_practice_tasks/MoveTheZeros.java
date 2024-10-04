@@ -7,20 +7,33 @@ import java.util.Collections;
 public class MoveTheZeros {
     public static void main(String[] args) {
 
+        //OPTION 1:
         ArrayList <Integer> list = new ArrayList<>(Arrays.asList(1,0,2,0,3,0,4,0));
-        Collections.sort(list);
-        System.out.println(list);
+        int numOfZero1 = Collections.frequency(list,0);
 
-        for (int i = 0, j=0;  i < list.size(); i++, j++) {
-            list.get(i);
-            list.set(i, list.size()-j);
-
+        for (int i = 0; i < numOfZero1; i++) {
+            Integer zero = 0; //Wrapper class Integer, because we pass remove() not index, but element;
+            list.remove(zero);
+            list.add(0);
         }
+
         System.out.println(list);
 
-//        Collections.rotate(list, 4);
-//        System.out.println(list);
+        //OPTION 2:
+        ArrayList <Integer> list2 = new ArrayList<>(Arrays.asList(1,0,2,0,3,0,4,0));
+        Collections.sort(list2);
+        Collections.rotate(list2, 4);
+        System.out.println(list2);
 
+        //OPTION 3:
+        ArrayList <Integer> list3 = new ArrayList<>(Arrays.asList(1,0,2,0,3,0,4,0));
+        int numOfZero = Collections.frequency(list3,0);
+        list3.removeAll(Arrays.asList(0));
+
+        for (int i = 0; i < numOfZero; i++) {
+            list3.add(0);
+        }
+        System.out.println(list3);
 
     }
 }

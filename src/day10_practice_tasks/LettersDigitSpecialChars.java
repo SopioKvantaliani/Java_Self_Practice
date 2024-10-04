@@ -7,6 +7,7 @@ public class LettersDigitSpecialChars {
         String str = "Wooden Spoon123!";
         String digits = "", letters = "", specialChars = "";
 
+
         for (char each : str.toCharArray()){
             if (Character.isLetter(each)){
                 letters +=each;
@@ -19,6 +20,8 @@ public class LettersDigitSpecialChars {
         System.out.println("Letters: "+letters);
         System.out.println("Digits: "+digits);
         System.out.println("SpecialChars: "+specialChars);
+
+
 
 
     }

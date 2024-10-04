@@ -1,5 +1,7 @@
 package day10_practice_tasks;
 
+import java.util.Collections;
+
 public class UpperCaseAndLowerCase {
     public static void main(String[] args) {
 
@@ -22,8 +24,24 @@ public class UpperCaseAndLowerCase {
             System.out.println(false);
         }
 
+        System.out.println(upperLowerMath(str));
+
 
     }
+    public static boolean upperLowerMath (String str){
+
+        int upper = 0; int lower = 0;
+
+        for (char each : str.toCharArray()){
+            if (Character.isUpperCase(each)){
+                upper++;
+            } else if (Character.isLowerCase(each)) {
+                lower++;
+            }
+        }
+        return upper==lower;
+    }
+
 }
 
 /*

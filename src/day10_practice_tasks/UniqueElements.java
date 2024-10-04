@@ -18,11 +18,11 @@ public class UniqueElements {
 
         //Solution 2:
         //i is element;
-        //frequency() checks how many times we have element i in the list, if it is >1 && their index numbers ar not the same.
+        //frequency() checks how many times we have element i in the list, if it is >1 it is removed;
         //It will be removed if the condition is true.
 
         ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(1, 1, 2, 3, 3, 4, 5, 5));
-        list2.removeIf(i -> Collections.frequency(list2, i) > 1 && list2.indexOf(i) != list2.lastIndexOf(i));
+        list2.removeIf(i -> Collections.frequency(list2, i) > 1);
 
         System.out.println(list2);
 

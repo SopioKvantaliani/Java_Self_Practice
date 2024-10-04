@@ -18,7 +18,6 @@ public class MaximumAndMinimumNumbers {
             if (list.get(i)>max){
                 max=list.get(i); //assign value
             }
-
             if (list.get(i)<min ){
                 min = list.get(i);
             }

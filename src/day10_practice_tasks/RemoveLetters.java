@@ -17,6 +17,10 @@ public class RemoveLetters {
         }
         System.out.println(list1);
 
+        //OPTION 2:
+        ArrayList <Character> list2 = new ArrayList<>(Arrays.asList('$', 'A', 'B', '1', '2', 'c', 'd', '@', '!', '3', '4'));
+        list2.removeIf(p-> Character.isLetter(p));
+        System.out.println(list2);
     }
 }
 
