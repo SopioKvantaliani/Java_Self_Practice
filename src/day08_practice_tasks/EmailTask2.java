@@ -1,6 +1,4 @@
-package day8_practice_tasks;
-
-import java.util.Locale;
+package day08_practice_tasks;
 
 public class EmailTask2 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package day8_practice_tasks;
+package day08_practice_tasks;
 
 public class CodingBat_withoutEnd2 {
     public static void main(String[] args) {

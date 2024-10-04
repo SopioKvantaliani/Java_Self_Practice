@@ -1,5 +1,4 @@
-package day8_practice_tasks;
-import java.util.Locale;
+package day08_practice_tasks;
 import java.util.Scanner;
 
 public class FirstAndLastName {

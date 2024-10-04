@@ -7,6 +7,7 @@ import java.util.Collections;
 public class RemoveDuplicates {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,1,2,2,3,3,4,4,5,6,7));
+        //
 
         //Solution 1:
         //n is element; indexOf () compares if elements of value n are same or not. If it's different -> removes;
@@ -19,7 +20,7 @@ public class RemoveDuplicates {
         //Solution 2:
         //i is element;
         //frequency() checks how many times we have element i in the list, if it is >1 && their index numbers ar not the same.
-        //It will be removed if the condition is true. 
+        //It will be removed if the condition is true.
 
         ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(1,1,2,2,3,3,4,4,5,6,7));
         list2.removeIf(i -> Collections.frequency(list2, i) > 1 && list2.indexOf(i) != list2.lastIndexOf(i));

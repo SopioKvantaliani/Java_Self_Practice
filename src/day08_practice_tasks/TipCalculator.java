@@ -1,7 +1,5 @@
-package day8_practice_tasks;
+package day08_practice_tasks;
 
-import java.nio.channels.ScatteringByteChannel;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class TipCalculator {
