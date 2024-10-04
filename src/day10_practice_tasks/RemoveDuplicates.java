@@ -6,26 +6,17 @@ import java.util.Collections;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,1,2,2,3,3,4,4,5,6,7));
-        //
 
-        //Solution 1:
-        //n is element; indexOf () compares if elements of value n are same or not. If it's different -> removes;
-        //If the index numbers are different this means that multiple of the same value.
-        //example: if there're two 5s, each one will have it's own index number;
+        //Option 1: Removes all the duplicates
+        ArrayList<Integer> list3 = new ArrayList<>(Arrays.asList(1,1,2,2,3,3,4,4,5,6,7));
+        ArrayList<Integer> uniqueList = new ArrayList<>();
 
-        list.removeIf(n -> list.indexOf(n) != list.lastIndexOf(n));  // removes duplicates
-        System.out.println(list);
-
-        //Solution 2:
-        //i is element;
-        //frequency() checks how many times we have element i in the list, if it is >1 && their index numbers ar not the same.
-        //It will be removed if the condition is true.
-
-        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(1,1,2,2,3,3,4,4,5,6,7));
-        list2.removeIf(i -> Collections.frequency(list2, i) > 1 && list2.indexOf(i) != list2.lastIndexOf(i));
-
-        System.out.println(list2);
+        for (Integer each : list3) {
+            if (!uniqueList.contains(each)){
+                uniqueList.add(each);
+            }
+        }
+        System.out.println(uniqueList);
 
 
     }
