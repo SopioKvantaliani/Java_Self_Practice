@@ -8,11 +8,11 @@ public class CydeoStudent {
     public int grade;
     public String batchNumber;
     public String groupNumber;
-    public static String SchoolName;
+    public static String schoolName;
     public static String programmingLanguage;
 
     static {
-        SchoolName = "CYDEO";
+        schoolName = "CYDEO";
         programmingLanguage = "Java";
     }
 
@@ -34,12 +34,14 @@ public class CydeoStudent {
         System.out.println(name +" is attending the class.");
     }
 
-    public void printSchoolName (){
-        System.out.println("School name is: "+CydeoStudent.SchoolName);
+    //as the attribute is static, better to do the static method
+    public static void printSchoolName (){
+        System.out.println("School name is -  "+schoolName);
     }
 
-    public void printProgLanguage(){
-        System.out.println("Name of the programming language " + name+" is studying is -> "+CydeoStudent.programmingLanguage);
+    //as the attribute is static, better to do the static method
+    public static void printProgLanguage(){
+        System.out.println("Name of the programming language - " + programmingLanguage);
     }
 
     public String toString() {
