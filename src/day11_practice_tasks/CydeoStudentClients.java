@@ -7,11 +7,18 @@ public class CydeoStudentClients {
         System.out.println(cydeoStudent1);
         cydeoStudent1.study();
         cydeoStudent1.attendClass();
-        cydeoStudent1.printSchoolName();
-        cydeoStudent1.printProgLanguage();
+        CydeoStudent.printProgLanguage();
+        CydeoStudent.printSchoolName();
+
+        System.out.println("------------------------");
 
         CydeoStudent cydeoStudent2 = new CydeoStudent("Josh", 30, 12322345, 2, "B27", "Group2");
-        cydeoStudent2.printProgLanguage();
+        System.out.println(cydeoStudent2);
+        cydeoStudent2.study();
+        cydeoStudent2.attendClass();
+        CydeoStudent.printSchoolName();
+        CydeoStudent.printProgLanguage();
+
 
 
 

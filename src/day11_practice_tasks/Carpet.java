@@ -14,24 +14,15 @@ public class Carpet {
         this.isPersian = isPersian;
     }
 
-    public double calculatePrice (){
-        double totalPrice = 0;
-        totalPrice = (width * length) * unitPrice;
+    public double calculatePrice() {
+        double totalPrice = (width * length) * unitPrice;
+        return totalPrice + (isPersian ? 200 : 0);
 
-        if (isPersian){
-            totalPrice+=200;
-        }
-        return totalPrice;
     }
 
     public String toString() {
-        return "Carpet{" +
-                "width=" + width +
-                ", length=" + length +
-                ", unitPrice=" + unitPrice +
-                ", isPersian=" + isPersian +
-                ", totalPrice="+ calculatePrice()+
-                '}';
+        return "Your "+ (isPersian ? "persian ":" ") +"carpet that is "+width +" x "+length+
+                " and a unit price of $"+unitPrice+" costs a total of $"+calculatePrice();
     }
 }
 
