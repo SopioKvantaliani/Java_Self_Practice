@@ -11,7 +11,7 @@ public class Candy {
     }
 
     public void setPrice(double price) {
-        if (price<=0){
+        if (price<0){
             System.err.println("Price should be positive");
             System.exit(1);
         }
@@ -23,7 +23,7 @@ public class Candy {
     }
 
     public void setQuantity(int quantity) {
-        if (quantity<=0){
+        if (quantity<0){
             System.err.println("Quantity should not be negative");
             System.exit(1);
         }
@@ -33,15 +33,15 @@ public class Candy {
     public Candy(String brand, boolean hasPeanuts, double price, int quantity) {
         this.brand = brand;
         this.hasPeanuts = hasPeanuts;
-        this.price = price;
-        this.quantity = quantity;
+        setPrice(price);
+        setQuantity(quantity);
     }
 
     public String toString() {
         return "Candy{" +
                 "brand='" + brand + '\'' +
                 ", quantity=" + quantity +
-                ", price="  + (price==0 ? "free" : String.valueOf(price))+
+                ", price="  + (price==0 ? " free" : price)+
                 "}";
     }
 }
