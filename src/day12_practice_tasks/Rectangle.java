@@ -30,11 +30,10 @@ public class Rectangle {
     }
 
     public void setWidth(int width) {
-        if (width<=0){
-            System.err.println("Invalid number "+width);
-            System.exit(1);
+        if (width>0){
+            this.width = width;
         }
-        this.width = width;
+
     }
 
     public double calcArea(){
